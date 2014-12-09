@@ -9,9 +9,9 @@ Prerequisite
 contextRoot=https://nextpodio.dk/login
 
 #Add the username of the test user to the following key
-userName=professor@zgvkblzwmnxwrnruudbf.com
+userName=
 #Add password value for the test user
-password=professor_$ecur3Pwd
+password=
 
 
 Where are the description of test case
