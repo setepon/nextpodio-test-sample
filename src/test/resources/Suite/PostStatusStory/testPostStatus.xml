@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Test_Post_Status_Story">
+
+	<test name="testPostStatus" preserve-order="false">
+		<classes>
+			<class name="com.nextpodio.test.gui.TestPostStatusOnGlobalStream">
+				<methods>
+					<include name="testPostStatus">
+						<parameter name="status" value="test normal string"></parameter>
+						<parameter name="workspace" value="Employee Network"></parameter>
+					</include>
+
+
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="testPost@People" preserve-order="false">
+		<classes>
+			<class name="com.nextpodio.test.gui.TestPostStatusOnGlobalStream">
+				<methods>
+					<include name="testPostStatusAtTermWith2Words">
+						<parameter name="status" value="@Turanga Leela test"></parameter>
+						<parameter name="workspace" value="Projects"></parameter>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="testPostSpecialCharacters" preserve-order="false">
+		<classes>
+			<class name="com.nextpodio.test.gui.TestPostStatusOnGlobalStream">
+				<methods>
+					<include name="testPostStatus">
+						<parameter name="status" value="&lt;a href=&quot;abc&quot; /&gt;"></parameter>
+						<parameter name="workspace" value="Projects"></parameter>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="testPost@workspace" preserve-order="false">
+		<classes>
+			<class name="com.nextpodio.test.gui.TestPostStatusOnGlobalStream">
+				<methods>
+					<include name="testPostStatus">
+						<parameter name="status" value="@Shipping abc"></parameter>
+						<parameter name="workspace" value="Demo Workspace"></parameter>
+					</include>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+</suite>
+

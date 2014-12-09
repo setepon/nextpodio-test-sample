@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Test_Login_Story">
+	
+	<test name="testLogin" preserve-order="false">
+		<classes>
+			<class name="com.nextpodio.test.gui.TestLogin" >
+			<methods>
+					<include name="testLoginWithCorrectCredential">
+						<parameter name="username" value="professor@zgvkblzwmnxwrnruudbf.com"></parameter>
+						<parameter name="password" value="professor_$ecur3Pwd"></parameter>
+					</include>
+			
+					<include name="testLoginWithWrongPassword">
+						<parameter name="username" value="professor@zgvkblzwmnxwrnruudbf.com"></parameter>
+						<parameter name="password" value="1=1"></parameter>
+					</include>
+					
+					<include name="testLoginWithWrongUserName">
+						<parameter name="username" value="Professor@invaild.com"></parameter>
+						<parameter name="password" value="professor_$ecur3Pwd"></parameter>
+					</include>
+			</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="testLoginCaseSensitive" preserve-order="false">
+		<classes>
+			<class name="com.nextpodio.test.gui.TestLogin" >
+			<methods>
+					
+					<include name="testLoginWithWrongPassword">
+						<parameter name="username" value="professor@zgvkblzwmnxwrnruudbf.com"></parameter>
+						<parameter name="password" value="professor_$ecur3PwD"></parameter>
+					</include>
+					
+					<include name="testLoginWithWrongUserName">
+						<parameter name="username" value="Professor@zgvkblzwmnxwrnruudbf.com"></parameter>
+						<parameter name="password" value="professor_$ecur3Pwd"></parameter>
+					</include>
+					
+			</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
+

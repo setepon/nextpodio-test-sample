@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="NextPodio_Sample_Test">
+    <suite-files>  		
+     
+     
+        <suite-file path="./LoginStory/testLogin.xml"/>
+        <suite-file path="./PostStatusStory/testPostStatus.xml"/>
+       
+    </suite-files>
+</suite>

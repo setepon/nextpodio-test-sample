@@ -1,0 +1,11 @@
+{
+    "remoteAddress": "http://localhost:4444/wd/hub",
+    "configuration": [
+        {
+            "browserName": "firefox"
+        },
+        {
+        	"browserName": "chrome"
+        }
+    ]
+}
