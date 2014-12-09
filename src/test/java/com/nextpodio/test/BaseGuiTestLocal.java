@@ -32,7 +32,7 @@ public class BaseGuiTestLocal {
 		driver.manage().window().maximize();
 	}
 
-	//@AfterClass
+	@AfterClass
 	public void quit() {
 		driver.quit();
 	}

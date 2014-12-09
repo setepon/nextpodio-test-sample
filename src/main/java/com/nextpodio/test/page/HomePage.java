@@ -44,7 +44,7 @@ public class HomePage extends BasePage {
 								.getWebElement()));
 
 		spaceSwitcherButtonDiv.click();
-		// wait for the available list to retrieve
+		// wait for workspace list to expand
 		new WebDriverWait(delegate, defaultImplicitlyWait)
 				.until(ExpectedConditions.presenceOfElementLocated(By
 						.className("space_listitemcontent")));
@@ -63,6 +63,7 @@ public class HomePage extends BasePage {
 			}
 		}
 
+		//wait for the commit action
 		new WebDriverWait(delegate, defaultImplicitlyWait)
 				.until(new ExpectedCondition<Boolean>() {
 					public Boolean apply(WebDriver driver) {
@@ -75,15 +76,16 @@ public class HomePage extends BasePage {
 					}
 				});
 
-		
+		//verify the status posted
 		ul(By.className("content")).li().div(By.className("title markdown")).getText()
 				.shouldBe(status);
+		//verify the workspace posted
 		ul(By.className("content")).li().link(By.className("space")).getText()
 				.shouldBe(workspace);
 	}
 
 	private void selectAtTarget(String target) {
-		// wait for the available list to retrieve
+		// wait for list show from hidden
 		new WebDriverWait(delegate, defaultImplicitlyWait)
 				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By
 						.cssSelector("div.info")));
@@ -94,6 +96,7 @@ public class HomePage extends BasePage {
 
 			String strAt = choice.div(By.className("info")).getText()
 					.toString().trim();
+			//remove suffix when compare with the target 
 			if (choice.div(By.className("info")).has()
 					.span(By.className("suffix"))) {
 				int endIndex = strAt.lastIndexOf(choice
