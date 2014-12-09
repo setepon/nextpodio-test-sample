@@ -119,7 +119,7 @@
 									<systemProperties>
 										<property>
 											<name>org.uncommons.reportng.title</name>
-											<value>EAS Report</value>
+											<value>Test Report</value>
 										</property>
 										
 										<property>
